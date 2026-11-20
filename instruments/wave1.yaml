@@ -1,0 +1,12 @@
+name: wave1
+title: First wave o test
+uses:
+  bank: ../
+flow:
+  - say: Hi! Welcome!
+  - ask: bank.consent
+  - if: bank.consent = "1" 
+    then:
+      - ask: bank.household_size
+    else:
+      - say: Thank you!
